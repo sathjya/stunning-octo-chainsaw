@@ -1,7 +1,7 @@
 import os
 import pyrogram
 import logging
-from PicBot.config_var import Config
+from PicBot.config import Config
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
