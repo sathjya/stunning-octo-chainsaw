@@ -1,0 +1,7 @@
+pyrogram
+requests>=2.25.1
+telethon
+Pillow
+beautifulsoup4>=4.9.3
+heroku3>=4.2.3
+python-dotenv>=0.15.0

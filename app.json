@@ -1,0 +1,39 @@
+{
+  "name": "Pic-Bot",
+  "description": "A Bot Based On Pyrogram.",
+  "logo": " ",
+  "keywords": [
+    "telegram",
+    "Cool",
+    "Picbot",
+    "Pictures",
+  ],
+  "repository": "https://github.com/Naveen-xd2580/PictureBot",
+  "website": "Not yet",
+  "success_url": "Not yet",
+  "stack": "container",
+  "env": {
+    "API_ID": {
+      "description": "Get this value from my.telegram.org! Please do not steal",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org! Please do not steal",
+      "value": ""
+    },    
+    "HEROKU_API_KEY": {
+      "description": "Go to https://dashboard.heroku.com/account, scroll down and press Reveal API.",
+      "value": ""
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Heroku App Name That You Filled Above.",
+      "value": ""
+    },    
+    "BOT_TOKEN": {
+      "description": "Your Bot Token Obtained From @BotFather. This is Not Important",
+      "value": "",
+      "required": false
+    },
+    }
+  }
+}
