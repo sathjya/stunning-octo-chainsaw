@@ -8,11 +8,7 @@ from pyrogram import __version__, client
 
 from pyrogram import Client, filters
 
-from bot import SUPPORT_CHAT_LINK
-
 from pyrogram import Client, filters
-
-from bot.config import Messages as tr
 
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
@@ -84,21 +80,15 @@ async def bot_sys_stats():
 
     stats = f"""
 
-Naveen_xD@Mr.Stark
+👉 UPTIME: {get_readable_time((time.time() - bot_start_time))}
 
---------------------------
+👉 BOT: {round(process.memory_info()[0] / 1024 ** 2)} MB
 
-✘ VERSION: {version}
+👉 CPU: {cpu}%
 
-✘ UPTIME: {get_readable_time((time.time() - bot_start_time))}
+👉 RAM: {mem}%
 
-✘ BOT: {round(process.memory_info()[0] / 1024 ** 2)} MB
-
-✘ CPU: {cpu}%
-
-✘ RAM: {mem}%
-
-✘ DISK: {disk}%
+👉 DISK: {disk}%
 
 """
 
@@ -114,9 +104,7 @@ async def cb_handler(client, query):
 
         await query.message.edit_text(
 
-            text = f"<b>My name : <b/>Gdrive hexbot</i>\n<b>○ Creator : <a href='https://t.me/hexbots'>HEXBOTS</a>\n Language : <code>Python3</code>\n○ Library : <a href='https://docs.pyrogram.org/'>Pyrogram {__version__}</a></b>",
-
-            disable_web_page_preview = True,
+            text = f"I said don't click",
 
             reply_markup = InlineKeyboardMarkup(
 
@@ -137,6 +125,7 @@ async def cb_handler(client, query):
     elif data == "back":
 
         firstname = query.from_user.first_name
+        await 
 
         await query.message.edit_text(
 
