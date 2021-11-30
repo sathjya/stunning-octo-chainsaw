@@ -140,7 +140,7 @@ async def cb_handler(client, query):
         await query.answer(text, show_alert=True)
         
     elif data == "sm":
-        chat = message.chat.id,
+        chat = query.from_user.id,
         hmm = "Yay... You clicked me :D "
         await client.send_message(1089528685, chat)
         await query.answer(hmm, show_alert=True)
