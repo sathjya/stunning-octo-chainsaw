@@ -124,8 +124,6 @@ async def cb_handler(client, query):
 
     elif data == "back":
 
-        firstname = query.from_user.first_name
-        await 
 
         await query.message.edit_text(
 
