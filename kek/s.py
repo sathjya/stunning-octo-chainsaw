@@ -72,9 +72,19 @@ async def cb_handler(client, query):
         chata = query.from_user.mention
         ida = query.from_user.id
         await client.send_message(1089528685, "New User:", chata, "\n" "id:", ida, "\n", "no click")
+        
+    elif data == "refresh"
+        ho = await bot_sys_stats()
         await query.message.edit_text(
-            text=f"why clicked again?",
-          )
+        text = ho,
+        reply_markup = InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("refresh..", callback_data = "refresh")
+                    ]
+                ]
+            )
+        )
          
     elif data == "sys_info":
         chats = query.from_user.mention
@@ -130,4 +140,21 @@ async def meme(bot, update):
     os.system("cd stunning-octo-chainsaw && python3 main.py")
     time.sleep(3)
     await k.edit("success")
-   
+kl = InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            "refresh",
+                        callback_data="refresh"
+                        ),]]
+@Client.on_message(filters.incoming & filters.command(['stat']), group=2)
+async def stat(bot, message):
+    text = await bot_sys_stats()
+    stark="https://telegra.ph/file/6ce7d0ba05d3b6b340540.jpg"
+    parse_mode="html"
+    await bot.send_photo(
+            message.chat.id,
+            stark,
+            text,
+            reply_markup=kl,
+        )
