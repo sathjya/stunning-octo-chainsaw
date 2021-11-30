@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 
-@Client.on_message(filters.command(["help"]))
+@Client.on_message(filters.command(["h"]))
 async def help_menu(bot, update):
      text = f"**Hey theese are the available commands:**\n"
      text += f"➤ /start - To start Me:)\n"
