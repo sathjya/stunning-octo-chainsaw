@@ -7,21 +7,28 @@ import requests
 import time
 import os
 import re
+import os
+import pyrogram
+import logging
+from config import Config
+
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
 
 
-if __name__ == "main" :
-    print("Starting...")
-    plugins = dict(root="kek")
-    app = pyrogram.Client(
+
+print("Starting...")
+plugins = dict(root="kek")
+app = pyrogram.Client(
         "kek",
-        bot_token=Config.BOT_TOKEN,
-        api_id=Config.API_ID,
-        api_hash=Config.API_HASH,
-        plugins=kek
+        bot_token="2141059399:AAGzKwYUiWbSbKFQgZos_FqRwrLJXcbI-pU",
+        api_id=2171111,
+        api_hash="fd7acd07303760c52dcc0ed8b2f73086",
+        plugins=plugins
     )
-    app.run()
+app.run()
+
+
 
 #@Client.on_message(filters.command(["update"]) & filters.user(1089528685))
 
